@@ -1,0 +1,540 @@
+body{
+  background-image: url("../img/bg.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  min-height: 100vh;
+  min-width: 100vw;
+  height: 100vh;
+  width: 100vw;
+  margin: 0;
+  padding-top: 0px;
+  box-sizing: border-box;
+}
+body * {
+  box-sizing: border-box;
+}
+.window{
+  width: 9vw;
+  height: 13vh;
+  border: 2px solid white;
+  margin: 0 10px;
+  position: relative;
+  font-family: sans-serif;
+  background-color: var(--color2);
+  transition: all, 0.2s;
+  cursor: pointer;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+}
+.window:hover{
+  /*background-color: rgba(255,150,150,0.3);*/
+}
+#container{
+  display: flex;
+  align-items: flex-end;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100vh;
+  padding: 15px 5px;
+}
+.row{
+  width: calc(100vw - 20px);
+  display: flex;
+  justify-content: flex-end;
+}
+.row-0{
+  width: 90vw;
+}
+.row-1{
+  width: 75%;
+}
+.row-2{
+  width: 50%;
+}
+.row-3{
+  width: 30%;
+}
+.row-4{
+  width: 25%;
+}
+/*.row-1 .window:first-child, .row-2 .window:first-child, .row-3 .window:first-child, .row-4 .window:first-child{*/
+/*    position: absolute;*/
+/*    left: 0;*/
+/*}*/
+.day-number{
+  color: white;
+  font-size: 22pt;
+  position: absolute;
+  right: 15px;
+  bottom: -6px;
+  font-family: 'Indie Flower', cursive;
+}
+.day-number.circle{
+  width: 4vw;
+  height: 3.5vw;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 4vw;
+  bottom: 4px;
+  left: 9px;
+  text-shadow: none;
+}
+.day-number.square{
+  width: 3.5vw;
+  height: 3vw;
+  text-align: center;
+  line-height: 3vw;
+  bottom: 9px;
+  font-size: 19pt;
+  right: 9px;
+  text-shadow: none;
+  border-radius: 3px;
+}
+.window.opened{
+  background-color: #330000;
+  background-size: 60%;
+  background-repeat: no-repeat;
+  background-position: center center;
+  border: 2px solid grey;
+  opacity: 0.4;
+}
+.window.opened.video{
+  background-image: url("../img/ytb_icon.svg");
+}
+.window.opened.image{
+  background-image: url("../img/drawing.svg");
+}
+.window.opened.audio{
+  background-image: url("../img/audio.png");
+}
+.window.opened.game{
+  background-image: url("../img/game.png");
+}
+
+/* 2021 */
+:root{
+  --color1: #0f5a91;
+  --color2: #d4dbea;
+  --color3: #3b581e;
+  --color4: #ae4276;
+  --color5: #861613;
+  --color6: #063353; /* For Popups and Memory and so on */
+}
+.window.darkgreen{
+  background-color: var(--color1);
+}
+.window.red{
+  background-color: var(--color2);
+}
+.window.darkred{
+  background-color: var(--color3);
+}
+.window.lightgreen{
+  background-color: var(--color4);
+}
+.window.golden{
+  background-color: var(--color5);
+}
+.c-red{
+  color: var(--color3);
+}
+.bo-red{
+  border: 1px solid var(--color3);
+}
+.ba-red{
+  background-color: var(--color3);
+}
+.c-white{
+  color: white;
+}
+.bo-white{
+  border: 1px solid #fff;
+}
+.ba-white{
+  background-color: white;
+}
+.c-golden{
+  color: var(--color5);
+}
+.bo-golden{
+  border: 1px solid var(--color5);
+}
+.ba-golden{
+  background-color: var(--color5);
+}
+.c-green{
+  color: var(--color1);
+}
+.bo-green{
+  border: 1px solid var(--color1);
+}
+.ba-green{
+  background-color: var(--color1);
+}
+.bo-lightgreen{
+  border: 1px solid var(--color4);
+}
+.ba-lightgreen{
+  background-color: var(--color4);
+}
+
+/* 2020
+.window.darkgreen{
+    background-color: #385c00;
+}
+.window.red{
+    background-color: #ae0100;
+}
+.window.darkred{
+    background-color: #940f11;
+}
+.window.lightgreen{
+    background-color: #719e56;
+}
+.window.golden{
+    background-color: #9c7b28;
+}
+
+.c-red{
+    color: #990000;
+}
+.bo-red{
+    border: 1px solid #990000;
+}
+.ba-red{
+    background-color: #990000;
+}
+.c-white{
+    color: white;
+}
+.bo-white{
+    border: 1px solid #fff;
+}
+.ba-white{
+    background-color: white;
+}
+.c-golden{
+    color: #937b28;
+}
+.bo-golden{
+    border: 1px solid #937b28;
+}
+.ba-golden{
+    background-color: #937b28;
+}
+.c-green{
+    color: #385c00;
+}
+.bo-green{
+    border: 1px solid #385c00;
+}
+.ba-green{
+    background-color: #385c00;
+}
+.bo-lightgreen{
+    border: 1px solid #719e56;
+}
+.ba-lightgreen{
+    background-color: #719e56;
+} */
+.rotate-1{
+  transform: rotate(-22deg);
+}
+.rotate-2{
+  transform: rotate(-7deg);
+}
+.rotate-3{
+  transform: rotate(9deg);
+}
+.rotate-4{
+  transform: rotate(16deg);
+}
+.underline{
+  text-decoration: underline;
+}
+
+.shake {
+  animation: shake 0.5s;
+}
+@keyframes shake {
+  0% { transform: translate(1px, 1px) rotate(0deg); }
+  10% { transform: translate(-1px, -2px) rotate(-1deg); }
+  20% { transform: translate(-3px, 0px) rotate(1deg); }
+  30% { transform: translate(3px, 2px) rotate(0deg); }
+  40% { transform: translate(1px, -1px) rotate(1deg); }
+  50% { transform: translate(-1px, 2px) rotate(-1deg); }
+  60% { transform: translate(-3px, 1px) rotate(0deg); }
+  70% { transform: translate(3px, 1px) rotate(-1deg); }
+  80% { transform: translate(-1px, -1px) rotate(1deg); }
+  90% { transform: translate(1px, 2px) rotate(0deg); }
+  100% { transform: translate(1px, -2px) rotate(-1deg); }
+}
+#screen{
+  position: absolute;
+  top: 2.5vh;
+  left: 5vw;
+  width: 0;
+  height: 0;
+  z-index:1000;
+  opacity: 0;
+  transition: 0.2s;
+  transition-property: opacity;
+  background-color: var(--color6);
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#screen.image #player{
+  width: 93%;
+  height: 93%;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+#screen.active{
+  width: 90vw;
+  height: 95vh;
+  opacity: 1;
+}
+#miroslav-close{
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  right: 15px;
+  top: 15px;
+  cursor: pointer;
+  background-color: rgba(255,255,255,1);
+  border-radius: 50%;
+  color: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Indie Flower', cursive;
+  font-weight: bold;
+  font-size: 17pt;
+}
+.audio_instruction{
+  width: 30px;
+  height: 30px;
+  background-color: white;
+  position: absolute;
+  left: 15px;
+  top: 15px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+#boomshine{
+  height: 100%;
+  display: none;
+}
+#boomshine.active{
+  display: block;
+}
+#canvas{
+  margin-top: 50px;
+  border: 1px solid white;
+  background-image: url('../img/boomshine_bg.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+#boomshine_extras{
+  display: flex;
+  justify-content: space-between;
+  color: white;
+  font-family: 'Indie Flower', cursive;
+}
+#boomshine_extras p{
+  margin: 0;
+}
+#phone{
+  border: 0;
+  padding: 11px 10px;
+}
+#dwarfme{
+  background-color: white;
+  border: 0;
+  padding: 11px 10px;
+}
+#dwarfonize{
+  display: none;
+  font-family: 'Indie Flower', cursive;
+  color: white;
+  position: absolute;
+  width: 0;
+  height: 0;
+  top: 0;
+  background-color: rgba(0,0,0,0.8);
+  align-items: center;
+  justify-content: center;
+  width: 0;
+  height: 0;
+  z-index:1000;
+  opacity: 0;
+  transition: 0.2s;
+  transition-property: opacity;
+  overflow: hidden;
+}
+#dwarfonize.active{
+  display: flex;
+  opacity: 1;
+  width: 100vw;
+  height: 100vh;
+}
+.inner{
+  background-color: var(--color1);
+  height: 80%;
+  width: 80%;
+  padding: 20px;
+  box-sizing: border-box;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+#memory, #guesswhat{
+  height: 80%;
+  width: 80%;
+  border: 10px solid var(--color1);
+  display: none;
+  position: relative;
+}
+#memory.active, #guesswhat.active{
+  display: block;
+}
+#memory_controls, #guesswhat_controls{
+  width: 100%;
+  height: 100%;
+  display: none;
+  background-color: rgba(0,0,0,0.9);
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: -10px;
+  left: -10px;
+  flex-direction: column;
+  border: 10px solid rgba(0,0,0,0);
+  font-family: 'Indie Flower', cursive;
+}
+#guesswhat_controls {
+  top: 0;
+  left: 0;
+}
+#memory_controls.active, #guesswhat_controls.active{
+  display: flex;
+}
+#memory_controls h2, #guesswhat_controls h2{
+  color: white;
+  text-align: center;
+}
+#play_again, #play_guesswhat_again{
+  background-color: white;
+  border: 0;
+  padding: 10px 25px;
+}
+#deck, #guesswhat_deck{
+  display: flex;
+  flex-wrap: wrap;
+  /*background-color: rgba(230,50,50,0.5);*/
+  background-color: var(--color1);
+  justify-content: center;
+}
+#guesswhat_deck{
+  height: 100%;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#gw_quests, #gw_options{
+  width: 45%;
+  display: flex;
+  flex-wrap: wrap;
+  background-color: var(--color1);
+  justify-content: center;
+  height: 100%;
+}
+#gw_help{
+  width: 5vw;
+  background-color: white;
+  height: 5vw;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 5vw;
+  font-weight: bold;
+  font-size: 20pt;
+  cursor: pointer;
+  opacity: 0.1;
+  transition: all, 0.2s;
+}
+#gw_help.active{
+  opacity: 1;
+}
+.memory_card, .guesswhat_card, .guesswhat_option{
+  width: calc(16.66% - 10px);
+  height: calc(23vh - 4px);
+  border: 2px solid var(--color1);
+  margin: 1.15vh 5px;
+  border-radius: 5px;
+  background-color: white;
+  perspective: 1000px;
+  cursor: pointer;
+}
+.guesswhat_card, .guesswhat_option{
+  width: calc(33.33% - 10px);
+  height: calc(20% - 14px);
+  margin: 5px;
+}
+.card_inner{
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 1.1s;
+  transform-style: preserve-3d;
+}
+.card_front, .card_back{
+  border-radius: 3px;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden; /* Safari */
+  backface-visibility: hidden;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+.card_front{
+  background-size: contain;
+  background-image: url("https://advent.neuwersch.eu/img/icon-384x384.png");
+  width: 100%;
+  height: 100%;
+}
+.card_back{
+  width: 100%;
+  background-size: cover;
+  height: 100%;
+  transform: rotateY(180deg);
+}
+#guesswhat .card_back{
+  background-size: contain;
+}
+
+.memory_card.opened, .guesswhat_card.opened, .guesswhat_option.opened{
+  border: 2px solid var(--color2);
+}
+.memory_card.solved, .guesswhat_card.solved, .guesswhat_option.solved {
+  border: 2px solid var(--color4);
+}
+.memory_card.opened .card_inner, .guesswhat_card.solved .card_inner, .guesswhat_option .card_inner{
+  transform: rotateY(180deg);
+}
+@supports (-webkit-touch-callout: none) {
+  /* CSS specific to iOS devices */
+}
