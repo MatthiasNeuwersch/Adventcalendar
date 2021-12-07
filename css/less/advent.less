@@ -478,7 +478,7 @@ body * {
 #gw_help.active{
   opacity: 1;
 }
-.memory_card, .guesswhat_card, .guesswhat_option{
+.memory_card, .guesswhat_card, .gw_option{
   width: calc(16.66% - 10px);
   height: calc(23vh - 4px);
   border: 2px solid var(--color1);
@@ -488,7 +488,7 @@ body * {
   perspective: 1000px;
   cursor: pointer;
 }
-.guesswhat_card, .guesswhat_option{
+.guesswhat_card, .gw_option{
   width: calc(33.33% - 10px);
   height: calc(20% - 14px);
   margin: 5px;
@@ -526,13 +526,13 @@ body * {
   background-size: contain;
 }
 
-.memory_card.opened, .guesswhat_card.opened, .guesswhat_option.opened{
+.memory_card.opened, .guesswhat_card.opened, .gw_option.opened{
   border: 2px solid var(--color2);
 }
-.memory_card.solved, .guesswhat_card.solved, .guesswhat_option.solved {
+.memory_card.solved, .guesswhat_card.solved, .gw_option.solved {
   border: 2px solid var(--color4);
 }
-.memory_card.opened .card_inner, .guesswhat_card.solved .card_inner, .guesswhat_option .card_inner{
+.memory_card.opened .card_inner, .guesswhat_card.solved .card_inner, .gw_option .card_inner{
   transform: rotateY(180deg);
 }
 @supports (-webkit-touch-callout: none) {

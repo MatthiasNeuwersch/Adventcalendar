@@ -48,79 +48,14 @@ class ADV_Guesswhat{
             });
     }
 
-    hint(){
-        if(this.opened.src.length)
-            new Audio("https://advent.neuwersch.eu/audio/guesswhat/q_"+this.opened.element.getAttribute("data-bg")+".mp3").play();
-    }
-
     initGuesswhat(){
-        let animals = window.Utils.shuffle(this.animals);
         this.quests.innerHTML = "";
         this.options.innerHTML = "";
         this.controls.classList.remove("active");
         this.match = 0;
 
-        for(let i = 0; i < animals.length; i++){
-            let quest = document.createElement("div");
-            quest.classList.add("gw_quest");
-            quest.classList.add("guesswhat_card");
-            let cardInner = document.createElement("div");
-            cardInner.classList.add("card_inner");
-
-            let cardFront = document.createElement("div");
-            cardFront.classList.add("card_front");
-            cardInner.appendChild(cardFront);
-
-            let cardBack = document.createElement("div");
-            cardBack.classList.add("card_back");
-            cardBack.style.backgroundImage = "url('img/guesswhat/"+animals[i]+".png')";
-            cardInner.appendChild(cardBack);
-
-            cardInner.appendChild(cardFront);
-            cardInner.appendChild(cardBack);
-            quest.appendChild(cardInner);
-
-            quest.setAttribute("data-bg", animals[i]);
-            this.quests.appendChild(quest);
-        }
-
-        animals = window.Utils.shuffle(this.animals);
-
-        for(let i = 0; i < animals.length; i++){
-            let option = document.createElement("div");
-            option.classList.add("gw_option");
-            option.classList.add("guesswhat_option");
-            let cardInner = document.createElement("div");
-            cardInner.classList.add("card_inner");
-
-            let cardFront = document.createElement("div");
-            cardFront.classList.add("card_front");
-            cardInner.appendChild(cardFront);
-
-            let cardBack = document.createElement("div");
-            cardBack.classList.add("card_back");
-            cardBack.style.backgroundImage = "url('img/guesswhat/"+animals[i]+".png')";
-            cardInner.appendChild(cardBack);
-
-            cardInner.appendChild(cardFront);
-            cardInner.appendChild(cardBack);
-            option.appendChild(cardInner);
-
-            option.setAttribute("data-bg", animals[i]);
-            this.options.appendChild(option);
-        }
-
-        let questCards = document.getElementsByClassName("gw_quest");
-        for(const questCard of questCards)
-            questCard.addEventListener("click", this.startQuest);
-
-        let optionCards = document.getElementsByClassName("gw_option");
-        for(const optionCard of optionCards)
-            optionCard.addEventListener("click", this.chooseOption);
-    }
-
-    endGuesswhat(){
-        this.controls.classList.add("active");
+        this.buildQuests();
+        this.buildOptions();
     }
 
     startQuest(){
@@ -161,5 +96,64 @@ class ADV_Guesswhat{
             window.guesswhat.opened = {src: "", element: null};
         }
     }
+
+    endGuesswhat(){
+        this.controls.classList.add("active");
+    }
+
+    buildQuests(){
+        let animals = window.Utils.shuffle(this.animals);
+        for(let i = 0; i < animals.length; i++){
+            let quest = document.createElement("div");
+            quest.classList.add("gw_quest");
+            quest.classList.add("guesswhat_card");
+
+            quest.appendChild(this.buildCard(animals, i));
+            quest.setAttribute("data-bg", animals[i]);
+            this.quests.appendChild(quest);
+
+            let questCards = document.getElementsByClassName("gw_quest");
+            for(const questCard of questCards)
+                questCard.addEventListener("click", this.startQuest);
+        }
+    }
+
+    buildOptions(){
+        let animals = window.Utils.shuffle(this.animals);
+        for(let i = 0; i < animals.length; i++){
+            let option = document.createElement("div");
+            option.classList.add("gw_option");
+
+            option.appendChild(this.buildCard(animals, i));
+            option.setAttribute("data-bg", animals[i]);
+            this.options.appendChild(option);
+
+            let optionCards = document.getElementsByClassName("gw_option");
+            for(const optionCard of optionCards)
+                optionCard.addEventListener("click", this.chooseOption);
+        }
+    }
+
+    buildCard(animals, i){
+        let cardInner = document.createElement("div");
+        cardInner.classList.add("card_inner");
+
+        let cardFront = document.createElement("div");
+        cardFront.classList.add("card_front");
+        cardInner.appendChild(cardFront);
+
+        let cardBack = document.createElement("div");
+        cardBack.classList.add("card_back");
+        cardBack.style.backgroundImage = "url('img/guesswhat/"+animals[i]+".png')";
+        cardInner.appendChild(cardBack);
+        return cardInner;
+    }
+
+    hint(){
+        if(this.opened.src.length)
+            new Audio("https://advent.neuwersch.eu/audio/guesswhat/q_"+this.opened.element.getAttribute("data-bg")+".mp3").play();
+    }
+
+
 }
 export default ADV_Guesswhat;

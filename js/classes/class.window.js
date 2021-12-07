@@ -36,6 +36,7 @@ class ADV_Window{
 
     click(e){
         e.preventDefault();
+        //Hide in Langley:
         ((this.today.getMonth() != 11 || this.today.getDate() < this.day) ) ? window.Utils.shake(this.element) : this.open();
     }
 
