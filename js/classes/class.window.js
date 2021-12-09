@@ -1,8 +1,8 @@
 "use strict";
 
-import ADV_Memory from "../games/game.memory.js";
-import ADV_Boomshine from "../games/game.boomshine.js";
-import ADV_Guesswhat from "../games/game.guesswhat.js";
+import ADV_Memory from "../games/game.memory.js?v=211209";
+import ADV_Boomshine from "../games/game.boomshine.js?v=211209";
+import ADV_Guesswhat from "../games/game.guesswhat.js?v=211209";
 
 /********************************************************************************
  *     Adventcalendar Windows

@@ -22,9 +22,9 @@ if('serviceWorker' in navigator) {
         });
 }
 
-import Shaby_Utils from "./classes/class.utils.js";
-import ADV_Model from "./classes/class.model.js";
-import ADV_Calendar from "./classes/class.calendar.js";
+import Shaby_Utils from "./classes/class.utils.js?v=211209";
+import ADV_Model from "./classes/class.model.js?v=211209";
+import ADV_Calendar from "./classes/class.calendar.js?v=211209";
 
 window.Utils = new Shaby_Utils();
 window.Model = new ADV_Model();

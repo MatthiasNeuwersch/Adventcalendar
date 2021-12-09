@@ -19,6 +19,7 @@
 class ADV_Guesswhat{
     constructor(){
         window.guesswhat = this;
+        //TODO: might change to different context next year. Rename 'animals' to something generic in the whole file.
         this.animals = [];
         this.opened = {
             src: "",
@@ -59,9 +60,9 @@ class ADV_Guesswhat{
     }
 
     startQuest(){
-        if(this.classList.contains("solved")){
+        if(this.classList.contains("solved"))
             new Audio("https://advent.neuwersch.eu/audio/guesswhat/q_"+this.getAttribute("data-bg")+".mp3").play();
-        } else{
+        else{
             document.getElementById("gw_help").classList.add("active");
             if(window.guesswhat.opened.src.length)
                 window.guesswhat.opened.element.classList.remove("opened");

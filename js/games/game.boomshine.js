@@ -53,21 +53,25 @@ class ADV_Boomshine{
     }
 
     initGame(){
+        if (this.numClear >= this.numNeed) {
+            this.eLevel.innerHTML = ++this.level;
+            this.score += this.numClear;
+        }
+
+
         this.boomshine.classList.add("active");
         this.H = this.screen.offsetHeight - 90;
         this.W = this.screen.offsetWidth - 30;
         this.canvas.height = this.H;
         this.canvas.width = this.W;
+
         this.level = 1;
         this.score = 0;
         this.numClear = 0;
         this.balls = [];
         this.NOW = 0;
         this.bgTime = 0;
-        if (this.numClear >= this.numNeed) {
-            this.eLevel.innerHTML = ++this.level;
-            this.score += this.numClear;
-        }
+
         this.numTotal = 10+ this.level * 2;
         this.numNeed = this.level == 1 ? 3 : Math.min(this.numTotal - 1, Math.round(Math.exp(this.level / 15 - 1) * this.numTotal)); // 15 = Until 15th question exponential growth
         this.createBalls(this.numTotal);

@@ -1,16 +1,16 @@
 <!doctype html>
 <html lang="de">
 <head>
-    <link rel="manifest" href="manifest.json?v=2021_nov">
+    <link rel="manifest" href="manifest.json?v=211209">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
     <meta name="theme-color" content="#0f5a91"/>
     <link rel="icon" href="favicon.ico" sizes="32x32">
-    <link rel="shortcut icon" href="favicon.ico?v=2021">
-    <link rel="apple-touch-icon" href="img/apple-touch-icon.png?v=2021_nov">
+    <link rel="shortcut icon" href="favicon.ico?v=211209">
+    <link rel="apple-touch-icon" href="img/apple-touch-icon.png?v=211209">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/advent.css?v=2021_nov"/>
+    <link rel="stylesheet" href="css/advent.css?v=211209"/>
     <meta charset="utf-8"/>
 </head>
 <body>
@@ -139,6 +139,6 @@
     </div>
 </div>
 <!--<script type="text/javascript" src="advent.js?v=2021_0412"></script>-->
-<script type="module"" src="/js/main.js"></script>
+<script type="module" src="/js/main.js?v=211209"></script>
 </body>
 </html>
