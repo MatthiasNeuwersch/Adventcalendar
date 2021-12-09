@@ -53,12 +53,6 @@ class ADV_Boomshine{
     }
 
     initGame(){
-        if (this.numClear >= this.numNeed) {
-            this.eLevel.innerHTML = ++this.level;
-            this.score += this.numClear;
-        }
-
-
         this.boomshine.classList.add("active");
         this.H = this.screen.offsetHeight - 90;
         this.W = this.screen.offsetWidth - 30;
@@ -71,7 +65,15 @@ class ADV_Boomshine{
         this.balls = [];
         this.NOW = 0;
         this.bgTime = 0;
+        this.initRound();
 
+    }
+
+    initRound(){
+        if (this.numClear >= this.numNeed) {
+            this.eLevel.innerHTML = ++this.level;
+            this.score += this.numClear;
+        }
         this.numTotal = 10+ this.level * 2;
         this.numNeed = this.level == 1 ? 3 : Math.min(this.numTotal - 1, Math.round(Math.exp(this.level / 15 - 1) * this.numTotal)); // 15 = Until 15th question exponential growth
         this.createBalls(this.numTotal);
@@ -193,7 +195,7 @@ class ADV_Boomshine{
             this.ctx.fill();
         }
         if (!stillOpen && this.lock)
-            this.initGame();
+            this.initRound();
         window.requestAnimationFrame(this.loop.bind(this));
     };
 }
