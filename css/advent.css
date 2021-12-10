@@ -440,15 +440,11 @@ body * {
   align-items: center;
   justify-content: center;
   position: absolute;
-  top: -10px;
-  left: -10px;
+  top: 0;
+  left: 0;
   flex-direction: column;
   border: 10px solid rgba(0, 0, 0, 0);
   font-family: 'Indie Flower', cursive;
-}
-#guesswhat_controls {
-  top: 0;
-  left: 0;
 }
 #memory_controls.active,
 #guesswhat_controls.active {
