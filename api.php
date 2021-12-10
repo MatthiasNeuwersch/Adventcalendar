@@ -16,6 +16,7 @@ class API{
     function __construct(){
         $this->params = json_decode(file_get_contents('php://input'), true);
         $this->content = [];
+        $this->cacheVersion = "?v=2021";
         $this->decide();
     }
 
@@ -44,7 +45,7 @@ class API{
                 "3"=>["type"=>"video", "src"=>"Rr98KZze9LY"],
                 "4"=>["type"=>"video", "src"=>"CeHF7KERnSY"],
                 "5"=>["type"=>"video", "src"=>"VyDFPtk4bsk"],
-                "6"=>["type"=>"audio", "src"=>["audio"=>"https://advent.neuwersch.eu/audio/nikolaus.mp3", "img"=>"https://advent.neuwersch.eu/img/nikolaus.jpg"]],
+                "6"=>["type"=>"audio", "src"=>["audio"=>"https://advent.neuwersch.eu/audio/nikolaus.mp3", "img"=>"https://advent.neuwersch.eu/img/nikolaus.jpg".$this->cacheVersion]],
                 "7"=>["type"=>"game", "src"=>"guesswhat"],
                 "8"=>["type"=>"video", "src"=>"95ewCbbrTP8"],
                 "9"=>["type"=>"game", "src"=>"boomshine"],
@@ -75,28 +76,29 @@ class API{
 
     private function getMemoir(){
         //TODO: Cardbacks still have their names from 2020 - find a general naming pattern!
+        $this->cacheVersion = "?v=2021";
         $this->content = [
             "access"=>"granted",
             "cardbacks" => [
-                "https://advent.neuwersch.eu/img/memoir/dommerl.jpg",
-                "https://advent.neuwersch.eu/img/memoir/fraunz.jpg",
-                "https://advent.neuwersch.eu/img/memoir/hias.jpg",
-                "https://advent.neuwersch.eu/img/memoir/lion.jpg",
-                "https://advent.neuwersch.eu/img/memoir/lissy.jpg",
-                "https://advent.neuwersch.eu/img/memoir/ls.jpg",
-                "https://advent.neuwersch.eu/img/memoir/opa-curt.jpg",
-                "https://advent.neuwersch.eu/img/memoir/vincenzo.jpg",
-                "https://advent.neuwersch.eu/img/memoir/trudl.jpg",
+                "https://advent.neuwersch.eu/img/memoir/dommerl.jpg".$this->cacheVersion,
+                "https://advent.neuwersch.eu/img/memoir/fraunz.jpg".$this->cacheVersion,
+                "https://advent.neuwersch.eu/img/memoir/hias.jpg".$this->cacheVersion,
+                "https://advent.neuwersch.eu/img/memoir/lion.jpg".$this->cacheVersion,
+                "https://advent.neuwersch.eu/img/memoir/lissy.jpg".$this->cacheVersion,
+                "https://advent.neuwersch.eu/img/memoir/ls.jpg".$this->cacheVersion,
+                "https://advent.neuwersch.eu/img/memoir/opa-curt.jpg".$this->cacheVersion,
+                "https://advent.neuwersch.eu/img/memoir/vincenzo.jpg".$this->cacheVersion,
+                "https://advent.neuwersch.eu/img/memoir/trudl.jpg".$this->cacheVersion,
 
-                "https://advent.neuwersch.eu/img/memoir/dommerl.jpg",
-                "https://advent.neuwersch.eu/img/memoir/fraunz.jpg",
-                "https://advent.neuwersch.eu/img/memoir/hias.jpg",
-                "https://advent.neuwersch.eu/img/memoir/lion.jpg",
-                "https://advent.neuwersch.eu/img/memoir/lissy.jpg",
-                "https://advent.neuwersch.eu/img/memoir/ls.jpg",
-                "https://advent.neuwersch.eu/img/memoir/opa-curt.jpg",
-                "https://advent.neuwersch.eu/img/memoir/vincenzo.jpg",
-                "https://advent.neuwersch.eu/img/memoir/trudl.jpg"
+                "https://advent.neuwersch.eu/img/memoir/dommerl.jpg".$this->cacheVersion,
+                "https://advent.neuwersch.eu/img/memoir/fraunz.jpg".$this->cacheVersion,
+                "https://advent.neuwersch.eu/img/memoir/hias.jpg".$this->cacheVersion,
+                "https://advent.neuwersch.eu/img/memoir/lion.jpg".$this->cacheVersion,
+                "https://advent.neuwersch.eu/img/memoir/lissy.jpg".$this->cacheVersion,
+                "https://advent.neuwersch.eu/img/memoir/ls.jpg".$this->cacheVersion,
+                "https://advent.neuwersch.eu/img/memoir/opa-curt.jpg".$this->cacheVersion,
+                "https://advent.neuwersch.eu/img/memoir/vincenzo.jpg".$this->cacheVersion,
+                "https://advent.neuwersch.eu/img/memoir/trudl.jpg.$this->cacheVersion"
             ]];
     }
 
