@@ -98,7 +98,7 @@ class API{
                 "https://advent.neuwersch.eu/img/memoir/ls.jpg".$this->cacheVersion,
                 "https://advent.neuwersch.eu/img/memoir/opa-curt.jpg".$this->cacheVersion,
                 "https://advent.neuwersch.eu/img/memoir/vincenzo.jpg".$this->cacheVersion,
-                "https://advent.neuwersch.eu/img/memoir/trudl.jpg.$this->cacheVersion"
+                "https://advent.neuwersch.eu/img/memoir/trudl.jpg".$this->cacheVersion
             ]];
     }
 

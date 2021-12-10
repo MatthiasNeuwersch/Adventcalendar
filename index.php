@@ -60,7 +60,7 @@
         <div class='window golden day-9 game' data-day='9'>
             <span class='day-number underline circle bo-white rotate-1 ba-green'>9</span>
         </div>
-        <div class='window lightgreen day-10 video' data-day='10'>
+        <div class='window lightgreen day-10 game' data-day='10'>
             <span class='day-number circle ba-red c-white'>10</span>
         </div>
     </div>
