@@ -37,7 +37,7 @@ class ADV_Window{
     click(e){
         e.preventDefault();
         //Hide in Langley:
-        ((this.today.getMonth() != 11 || this.today.getDate() < this.day) && window.Utils.getCookie("dwarfonize") != "master" ) ? window.Utils.shake(this.element) : this.open();
+        ((this.today.getMonth() != 11 || this.today.getDate() < this.day) ) ? window.Utils.shake(this.element) : this.open();
     }
 
     open(){
