@@ -1,6 +1,6 @@
 "use strict";
 
-import ADV_Window from "./class.window.js?v=211209_01";
+import ADV_Window from "./class.window.js?v=220103_01";
 
 /********************************************************************************
  *     ADV_Calendar

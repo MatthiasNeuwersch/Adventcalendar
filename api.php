@@ -61,8 +61,8 @@ class API{
                 "19"=>["type"=>"video", "src"=>"52oP-4iFL5I"],
                 "20"=>["type"=>"video", "src"=>"4eON1DU083g"],
                 "21"=>["type"=>"video", "src"=>"qpaYC9UWuyc"],
-                "22"=>["type"=>"image", "src"=>"https://advent.neuwersch.eu/img/Kripperl.png"],
-                "23"=>["type"=>"video", "src"=>"_o7nc4BxbAI"],
+                "22"=>["type"=>"video", "src"=>"lBZH7VWnTpI"],
+                "23"=>["type"=>"video", "src"=>"utX0jChKsI0"],
                 "24"=>["type"=>"video", "src"=>"AQ-dgBb5I0I"],
             ]];
     }

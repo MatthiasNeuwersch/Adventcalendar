@@ -1,8 +1,8 @@
 "use strict";
 
-import ADV_Memory from "../games/game.memory.js?v=211209_01";
-import ADV_Boomshine from "../games/game.boomshine.js?v=211209_01";
-import ADV_Guesswhat from "../games/game.guesswhat.js?v=211209_01";
+import ADV_Memory from "../games/game.memory.js?v=220103_01";
+import ADV_Boomshine from "../games/game.boomshine.js?v=220103_01";
+import ADV_Guesswhat from "../games/game.guesswhat.js?v=220103_01";
 
 /********************************************************************************
  *     Adventcalendar Windows
@@ -37,7 +37,8 @@ class ADV_Window{
     click(e){
         e.preventDefault();
         //Hide in Langley:
-        ((this.today.getMonth() != 11 || this.today.getDate() < this.day) ) ? window.Utils.shake(this.element) : this.open();
+        // ((this.today.getMonth() != 11 || this.today.getDate() < this.day) ) ? window.Utils.shake(this.element) : this.open();
+        this.open();
     }
 
     open(){
